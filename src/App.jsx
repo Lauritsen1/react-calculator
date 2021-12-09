@@ -11,11 +11,11 @@ function App() {
 
 	function getInput(x) {
 
-		if (display === '0') {
-			setDisplay('');
-		}
-
 		if (typeof x === 'number' && operator.current === '') {
+			if (display === '0') {
+				setDisplay('');
+			}
+
 			if (num1.current.length === 7) {
 				return false;
 			}
@@ -25,9 +25,18 @@ function App() {
 		}
 
 		if (typeof x === 'string') {
-			if (num2.current !== '') {
-				calculate();
+
+			if (num1.current === '') {
+				return false;
+
+			} else {
+
+				if (num2.current !== '') {
+					calculate();
+				}
 			}
+
+
 			operator.current = x;
 			console.log(operator);
 		}

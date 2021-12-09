@@ -60,14 +60,14 @@ body {
     background-color: #f69906;
 }
 
+.active {
+    background-color: white;
+    color: #f69906;
+}
+
 .btn--clear {
     background-color: lightgray;
     color: black;
-}
-
-.btn--active {
-    background-color: white;
-    color: #f69906;
 }
 
 .grid-span-2 {
